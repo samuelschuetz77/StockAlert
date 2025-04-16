@@ -299,6 +299,9 @@
             this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
+            this.btnAddAlert.Click += new System.EventHandler(this.btnAddAlert_Click);
+
+
         }
 
         #endregion
