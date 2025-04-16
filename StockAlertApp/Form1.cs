@@ -74,20 +74,11 @@ namespace StockAlertApp
                     AlertType type = (AlertType)Enum.Parse(typeof(AlertType), cmbAlertType.SelectedItem.ToString());
                     StockAlert newAlert = new StockAlert { Symbol = symbol, ThresholdPrice = threshold, Type = type };
 
-                    // Log the alert details
-                    MessageBox.Show($"[DEBUG] Creating alert: Symbol={symbol}, Threshold={threshold}, Type={type}", "Debug Log", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
                     // Save the alert
                     _alertService.SaveAlert(newAlert);
 
-                    // Log the save operation
-                    MessageBox.Show($"[DEBUG] Alert saved: {newAlert.Symbol} - {newAlert.Type} {newAlert.ThresholdPrice:C}", "Debug Log", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
                     // Add the alert description to the lstAlerts ListBox
                     lstAlerts.Items.Add($"{newAlert.Symbol} - {newAlert.Type} {newAlert.ThresholdPrice:C}");
-
-                    // Log the ListBox update
-                    MessageBox.Show($"[DEBUG] Alert added to ListBox: {newAlert.Symbol} - {newAlert.Type} {newAlert.ThresholdPrice:C}", "Debug Log", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     // Clear input fields
                     txtAlertSymbol.Clear();
@@ -129,10 +120,35 @@ namespace StockAlertApp
         {
             if (lstAlerts.SelectedIndex >= 0)
             {
-                // In a real application, you'd need to identify and remove the specific alert
+                // Get the selected alert description
+                string selectedAlert = lstAlerts.SelectedItem.ToString();
+
+                // Parse the symbol from the selected alert (assuming the format is "SYMBOL - TYPE PRICE")
+                string symbol = selectedAlert.Split('-')[0].Trim();
+
+                // Find the alert to remove
+                var alertToRemove = _alertService.LoadAlerts().FirstOrDefault(a => a.Symbol == symbol);
+                if (alertToRemove != null)
+                {
+                    // Remove the alert using the AlertService
+                    _alertService.RemoveAlert(alertToRemove);
+                }
+
+                // Remove the alert from the ListBox
                 lstAlerts.Items.RemoveAt(lstAlerts.SelectedIndex);
-                // Also remove it from the _alertService's list
+
             }
+        }
+
+        private void btnRemoveAlert_Click_1(object sender, EventArgs e)
+        {
+           
+
+        }
+
+        private void lstAlerts_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }

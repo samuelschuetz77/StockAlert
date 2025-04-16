@@ -24,6 +24,11 @@ namespace StockAlertApp
             
         }
 
+        public void RemoveAlert(StockAlert alert)
+        {
+            _alerts.Remove(alert);
+        }
+
         // Public method to monitor alerts
         public async Task MonitorAlerts()
         {
