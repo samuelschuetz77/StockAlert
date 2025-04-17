@@ -15,6 +15,7 @@ namespace StockAlertApp
     {
         public string Symbol { get; set; }
         public decimal ThresholdPrice { get; set; }
+        public int TriggerCount { get; set; } = 0; // Number of times the alert has been triggered
         public AlertType Type { get; set; }
     }
 }

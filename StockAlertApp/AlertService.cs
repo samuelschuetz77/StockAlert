@@ -57,14 +57,44 @@ namespace StockAlertApp
                             crossedDirection = "went down to";
                         }
 
-                        if (thresholdCrossed)
+                        if (thresholdCrossed && alert.TriggerCount <2)
                         {
+                            alert.TriggerCount++; // Increment the trigger count
                             // Trigger the event to notify subscribers
                             OnPriceThresholdCrossed?.Invoke(this, new PriceCrossedEventArgs(alert.Symbol, data.CurrentPrice.Value, crossedDirection));
+                            
+                            if (alert.TriggerCount >= 2)
+                            {
+                                // Add a small delay before removing to ensure the notification is shown
+                                await Task.Delay(100);
+
+                                // Create event args for alert removal notification
+                                var removeEventArgs = new AlertRemovedEventArgs(alert);
+
+                                // Remove the alert
+                                _alerts.Remove(alert);
+
+                                // Trigger event to notify subscribers about removal
+                                OnAlertRemoved?.Invoke(this, removeEventArgs);
+                            }
                         }
                     }
                 }
                 await Task.Delay(5000); // Check every 5 seconds (adjust as needed)
+            }
+        }
+
+        // Add a new event for alert removal notification
+        public event EventHandler<AlertRemovedEventArgs> OnAlertRemoved;
+
+        // Nested class for alert removal event arguments
+        public class AlertRemovedEventArgs : EventArgs
+        {
+            public StockAlert RemovedAlert { get; }
+
+            public AlertRemovedEventArgs(StockAlert alert)
+            {
+                RemovedAlert = alert;
             }
         }
 

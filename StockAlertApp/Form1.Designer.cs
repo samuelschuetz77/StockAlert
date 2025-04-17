@@ -87,10 +87,10 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Bookshelf Symbol 7", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(157, 10);
+            this.label1.Location = new System.Drawing.Point(111, 10);
             this.label1.Margin = new System.Windows.Forms.Padding(3, 10, 3, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(209, 25);
+            this.label1.Size = new System.Drawing.Size(301, 36);
             this.label1.TabIndex = 0;
             this.label1.Text = "Enter Stock Symbol ";
             // 
@@ -121,10 +121,10 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(865, 20);
+            this.label2.Location = new System.Drawing.Point(831, 20);
             this.label2.Margin = new System.Windows.Forms.Padding(3, 20, 3, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(152, 26);
+            this.label2.Size = new System.Drawing.Size(220, 37);
             this.label2.TabIndex = 3;
             this.label2.Text = "Set Price Alert";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -134,10 +134,10 @@
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(703, 73);
+            this.label3.Location = new System.Drawing.Point(679, 73);
             this.label3.Margin = new System.Windows.Forms.Padding(3, 10, 3, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(54, 17);
+            this.label3.Size = new System.Drawing.Size(78, 25);
             this.label3.TabIndex = 4;
             this.label3.Text = "Symbol";
             // 
@@ -146,10 +146,10 @@
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(649, 136);
+            this.label4.Location = new System.Drawing.Point(608, 136);
             this.label4.Margin = new System.Windows.Forms.Padding(3, 10, 3, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(108, 17);
+            this.label4.Size = new System.Drawing.Size(149, 25);
             this.label4.TabIndex = 5;
             this.label4.Text = "Price Threshold";
             // 
@@ -158,10 +158,10 @@
             this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(684, 197);
+            this.label5.Location = new System.Drawing.Point(655, 197);
             this.label5.Margin = new System.Windows.Forms.Padding(3, 10, 3, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(73, 17);
+            this.label5.Size = new System.Drawing.Size(102, 25);
             this.label5.TabIndex = 6;
             this.label5.Text = "Alert Type";
             // 
@@ -263,7 +263,7 @@
             this.lblLowPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLowPrice.Location = new System.Drawing.Point(187, 201);
             this.lblLowPrice.Name = "lblLowPrice";
-            this.lblLowPrice.Size = new System.Drawing.Size(72, 17);
+            this.lblLowPrice.Size = new System.Drawing.Size(101, 25);
             this.lblLowPrice.TabIndex = 2;
             this.lblLowPrice.Text = "Daily Low ";
             // 
@@ -273,7 +273,7 @@
             this.lblHighPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHighPrice.Location = new System.Drawing.Point(192, 138);
             this.lblHighPrice.Name = "lblHighPrice";
-            this.lblHighPrice.Size = new System.Drawing.Size(72, 17);
+            this.lblHighPrice.Size = new System.Drawing.Size(100, 25);
             this.lblHighPrice.TabIndex = 1;
             this.lblHighPrice.Text = "Daily High";
             // 
@@ -283,7 +283,7 @@
             this.lblCurrentPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCurrentPrice.Location = new System.Drawing.Point(192, 80);
             this.lblCurrentPrice.Name = "lblCurrentPrice";
-            this.lblCurrentPrice.Size = new System.Drawing.Size(91, 17);
+            this.lblCurrentPrice.Size = new System.Drawing.Size(126, 25);
             this.lblCurrentPrice.TabIndex = 0;
             this.lblCurrentPrice.Text = "Current Price";
             // 
