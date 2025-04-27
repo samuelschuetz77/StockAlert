@@ -20,15 +20,15 @@ StockAlert is a C# application designed to monitor and alert users about stock p
 
 1. **Input a Stock Symbol**:
    - Enter the stock symbol (e.g., `AAPL` for Apple, `GOOGL` for Google) in the input field.
-   - Click the "Add Stock" button to monitor the stock.
+   - Click the "Get Price Data" button to monitor the stock's current price, daily high, and daily low. 
 
 2. **Set an Alert**:
-   - After adding a stock, click on the stock name in the list.
-   - Set the price threshold for the alert (e.g., notify when the price goes above $150).
-   - Click "Set Alert" to save your preferences.
+   - Input stock ticker, price threshhold (when you want an alert to trigger), and alert type (stock goes above/below threshold).
+   - Click "Add Alert" to save your alert.
 
 3. **Receive Notifications**:
    - The app will notify you when the stock reaches the specified threshold.
+   - You will here an auditory alert if you have your volume up. 
 
 ## Running Tests
 
