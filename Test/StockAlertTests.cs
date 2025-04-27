@@ -1,9 +1,9 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using Xunit;
 using StockAlertApp;
 
-namespace StockAlertApp.Tests
+namespace StockAlertApp
 {
     public class StockAlertTests
     {
