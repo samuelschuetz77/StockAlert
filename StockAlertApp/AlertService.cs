@@ -9,7 +9,7 @@ namespace StockAlertApp
 {
     public class AlertService
     {
-        // Changed to protected to allow derived classes to access alerts if needed
+       
         protected List<StockAlert> _alerts = new List<StockAlert>();
 
         public List<StockAlert> LoadAlerts()
@@ -29,12 +29,12 @@ namespace StockAlertApp
             _alerts.Remove(alert);
         }
 
-        // Public method to monitor alerts
+       
         public async Task MonitorAlerts()
         {
             var stockDataService = new StockDataService(); 
 
-            while (true) // Run indefinitely in a background task
+            while (true) //background task
             {
                 foreach (var alert in _alerts.ToList()) 
                 {
