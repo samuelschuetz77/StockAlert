@@ -30,5 +30,17 @@ StockAlert is a C# application designed to monitor and alert users about stock p
 3. **Receive Notifications**:
    - The app will notify you when the stock reaches the specified threshold.
 
+## Running Tests
+
+### 1. Open the Test Explorer Pane
+
+1. In Visual Studio, go to `Test > Test Explorer` to open the Test Explorer pane.
+2. Ensure that the test project is loaded in the Solution Explorer.
+
+### 2. Run the Tests
+
+1. In the Test Explorer pane, click on `Run All` to execute all tests.
+2. Review the test results in the Test Explorer pane.
+
 ---
 
