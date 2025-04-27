@@ -32,11 +32,11 @@ namespace StockAlertApp
         // Public method to monitor alerts
         public async Task MonitorAlerts()
         {
-            var stockDataService = new StockDataService(); // Create an instance of StockDataService
+            var stockDataService = new StockDataService(); 
 
             while (true) // Run indefinitely in a background task
             {
-                foreach (var alert in _alerts.ToList()) // Iterate over a copy to allow modifications
+                foreach (var alert in _alerts.ToList()) 
                 {
                     // Use StockDataService to fetch stock data
                     StockData data = await stockDataService.GetStockData(alert.Symbol);
@@ -46,12 +46,12 @@ namespace StockAlertApp
                         bool thresholdCrossed = false;
                         string crossedDirection = "";
 
-                        if (alert.Type == AlertType.Above && data.CurrentPrice >= alert.ThresholdPrice)
+                        if (alert.Type == AlertType.Above && data.CurrentPrice > alert.ThresholdPrice)
                         {
                             thresholdCrossed = true;
                             crossedDirection = "went up to";
                         }
-                        else if (alert.Type == AlertType.Below && data.CurrentPrice <= alert.ThresholdPrice)
+                        else if (alert.Type == AlertType.Below && data.CurrentPrice < alert.ThresholdPrice)
                         {
                             thresholdCrossed = true;
                             crossedDirection = "went down to";
@@ -64,13 +64,12 @@ namespace StockAlertApp
                             OnPriceThresholdCrossed?.Invoke(this, new PriceCrossedEventArgs(alert.Symbol, data.CurrentPrice.Value, crossedDirection));
                             
                             if (alert.TriggerCount >= 2)
-                            {
-                                // Add a small delay before removing to ensure the notification is shown
+                            { 
                                 await Task.Delay(100);
 
                                 // Create event args for alert removal notification
                                 var removeEventArgs = new AlertRemovedEventArgs(alert);
-
+                                
                                 // Remove the alert
                                 _alerts.Remove(alert);
 

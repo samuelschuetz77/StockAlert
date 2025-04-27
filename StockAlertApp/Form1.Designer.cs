@@ -261,7 +261,7 @@
             // 
             this.lblLowPrice.AutoSize = true;
             this.lblLowPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLowPrice.Location = new System.Drawing.Point(187, 201);
+            this.lblLowPrice.Location = new System.Drawing.Point(186, 202);
             this.lblLowPrice.Name = "lblLowPrice";
             this.lblLowPrice.Size = new System.Drawing.Size(101, 25);
             this.lblLowPrice.TabIndex = 2;
@@ -271,7 +271,7 @@
             // 
             this.lblHighPrice.AutoSize = true;
             this.lblHighPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHighPrice.Location = new System.Drawing.Point(192, 138);
+            this.lblHighPrice.Location = new System.Drawing.Point(187, 138);
             this.lblHighPrice.Name = "lblHighPrice";
             this.lblHighPrice.Size = new System.Drawing.Size(100, 25);
             this.lblHighPrice.TabIndex = 1;
@@ -281,7 +281,7 @@
             // 
             this.lblCurrentPrice.AutoSize = true;
             this.lblCurrentPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCurrentPrice.Location = new System.Drawing.Point(192, 80);
+            this.lblCurrentPrice.Location = new System.Drawing.Point(187, 81);
             this.lblCurrentPrice.Name = "lblCurrentPrice";
             this.lblCurrentPrice.Size = new System.Drawing.Size(126, 25);
             this.lblCurrentPrice.TabIndex = 0;
